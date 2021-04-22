@@ -277,3 +277,17 @@ img {
   width: 45px;
   height: 45px;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 320px) {
+  .bd-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .controls__container {
+    column-gap: 0.25rem;
+  }
+}
+
+/* for tall screens on mobile and desktop */

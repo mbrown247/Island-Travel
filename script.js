@@ -13,3 +13,38 @@ const showMenu = (toggleId, navId) =>{
 }
 
 showMenu('nav-toggle','nav-menu')
+
+// POPUP
+
+/*==================== POPUP ====================*/
+const btnOpenVideo = document.querySelectorAll('.islands__video-content')
+const islandsPopup = document.getElementById('popup')
+
+function poPup(){
+    islandsPopup.classList.add('show-popup')
+}
+btnOpenVideo.forEach(b => b.addEventListener('click', poPup))
+
+const btnCloseVideo = document.getElementById('popup-close')
+
+btnCloseVideo.addEventListener('click', ()=> {
+    islandsPopup.classList.remove('show-popup')
+})
+
+// SWIPER JS
+
+/*==================== SWIPER JS ====================*/
+let galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+})
+
+let galleryTop = new Swiper('.gallery-top', {
+    effect: 'fade',
+    loop: true,
+
+    thumbs: {
+      swiper: galleryThumbs
+    }
+})
+
